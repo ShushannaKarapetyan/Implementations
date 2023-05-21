@@ -4,7 +4,7 @@ function filter(array, fun) {
     let index = 0;
     let filteredArray = [];
 
-    a.forEach(function (value) {
+    array.forEach(function (value) {
         if (fun(value)) {
             filteredArray[index] = value;
             index++;
