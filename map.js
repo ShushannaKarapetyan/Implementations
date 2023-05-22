@@ -9,12 +9,12 @@ let people = [
     },
 ];
 
-function map(arr, fn) {
+Array.prototype.map = function (fn) {
     let index = 0;
     let newArr = [];
 
-    while (arr.length > index) {
-        newArr[index] = fn(arr[index], index);
+    while (this.length > index) {
+        newArr[index] = fn(this[index], index);
 
         index++;
     }
@@ -22,7 +22,7 @@ function map(arr, fn) {
     return newArr;
 }
 
-let names = map(people, function (value, index) {
+let names = people.map(function (value, index) {
     return value.name;
 });
 
